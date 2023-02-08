@@ -4,17 +4,29 @@ public class timeSlow : Monobehavior
   private float t=1f;
   void Update();
   {
-    if(Input.GetKeyDown(KeyCode.Z)
+    if(Input.GetKey(KeyCode.Z)
     {
-      StartCouroutine(
+      StartCouroutine(time());
+    }
+    if(Input.GetKeyUp(Keycode.Z)
+    {
+      StartCouroutine((rtime));
     }
   }
   IEnumerator time()
   {
     foreach (int value in Enumerable.Range(0, 24))
     {
-      Time.timeScale = value
+      Time.timeScale = float value;
       yield return new WaitForSeconds(.01);
     }
   }
+  IEnumerator rtime()
+  {
+    foreach (int value in Enumerable.Range(0, 24))
+    {
+      Time.timeScale = float value;
+      yield return new WaitForSeconds(.01);
+    }
+  }  
 }
