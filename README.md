@@ -1,2 +1,3 @@
 # Code-Transfer
-If you are reading this and you do not have Permission please do not stay here
+HEYO if your reading this, First off hiiii, second of all follow my github pls. Finally dont steal this code its for a small game I am working on.
+This code is copyright under ANDROMEDA DEVLOPMENT CORPERATION
