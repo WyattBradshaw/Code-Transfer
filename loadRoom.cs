@@ -14,7 +14,7 @@ public class loadRoom : Monobehavior
   private bool started=false;
   
   
-  #CHANGE ENEMY SCRIPT TO SUBTRACT FROM ENUM EVERYDEATH
+  //CHANGE ENEMY SCRIPT TO SUBTRACT FROM ENUM EVERYDEATH
   
   void Start() 
   {
@@ -23,35 +23,35 @@ public class loadRoom : Monobehavior
       
   void Update()
   {
-    if started==true;
+    if (started==true);
     { 
-      if eNum<=0;   
+      if (eNum<=0);   
       {
         StopCoroutine(arenaTime());
-        Door.SetActive(True)
-        lDoor.SetActive(False)
-        atime.SetText(time.ToString();
-        if isTreasure==true;
+        Door.SetActive(True);
+        lDoor.SetActive(False);
+        atime.SetText(time.ToString());
+        if (isTreasure==true);
         {
-          Treasure.SetActive(True)
+          Treasure.SetActive(True);
         }
       }
     }
   }
   
-  void onCollisonEnter(Collider,collison)
+  void OnCollisonEnter(Collider collison)
   {    
-    if collison.tag == "Player"
+    if (collison.tag == "Player")
     {
-      if started==false
+      if (started==false)
       {
         StartCoroutine(arenaTime());
         started=true;
         Door.SetActive(false);
         lDoor.Setctive(true);
-        if isTreasure==true;
+        if (isTreasure==true);
         {
-          Treasure.SetActive(false)
+          Treasure.SetActive(false);
         }
       }
     }
@@ -61,4 +61,4 @@ public class loadRoom : Monobehavior
     yield return new WaitForSeconds(.01);
     time+=.01;
   }
-}  
+}
