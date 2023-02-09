@@ -14,10 +14,10 @@ public class gameManager : Monobehavior
   }
   void Update()
   {
-    if pheart<=0;
+    if(pheart<=0);
       isAlive=false;
   }
-  IEnumerator tp();
+  IEnumerator tp()
   {
     yield return new WaitForSeconds(60);
     timePlayed+=1;

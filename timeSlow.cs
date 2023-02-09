@@ -1,14 +1,15 @@
+
 using UnityEngine;
 public class timeSlow : Monobehavior
 {
   private float t=1f;
-  void Update();
+  void Update()
   {
-    if(Input.GetKey(KeyCode.Z)
+    if(Input.GetKey(KeyCode.Z))
     {
       StartCouroutine(time());
     }
-    if(Input.GetKeyUp(Keycode.Z)
+    if(Input.GetKeyUp(Keycode.Z))
     {
       StartCouroutine((rtime));
     }
@@ -17,7 +18,7 @@ public class timeSlow : Monobehavior
   {
     foreach (int value in Enumerable.Range(0, 24))
     {
-      Time.timeScale = float value;
+      Time.timeScale = value;
       yield return new WaitForSeconds(.01);
     }
   }
@@ -25,7 +26,7 @@ public class timeSlow : Monobehavior
   {
     foreach (int value in Enumerable.Range(0, 24))
     {
-      Time.timeScale = float value;
+      Time.timeScale =  value;
       yield return new WaitForSeconds(.01);
     }
   }  
